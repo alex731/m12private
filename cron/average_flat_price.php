@@ -12,7 +12,9 @@ function saveAveragePrices($start_date,$end_date) {
 	$sql = "SELECT rooms, ROUND(AVG(price)) price_avr, ROUND(AVG(total_area),1) area_avr, 
 		ROUND(AVG(price_m),1) price_m_avr 
 		FROM flat f, tenement t WHERE f.updated_on>='$start_date' 
-			AND f.updated_on<'$end_date' AND f.price>1000000 AND f.tenement_id=t.id 
+			AND f.updated_on<'$end_date' AND total_area > 29 AND total_area < 400
+			AND f.price>1000000 AND f.price < 6000000 AND f.tenement_id=t.id
+			AND f.status IN (2,6)
 			AND t.city_id=0 
 		GROUP BY rooms";
 	
@@ -24,19 +26,20 @@ function saveAveragePrices($start_date,$end_date) {
 	}	
 }
 
-/*
-$start_date = '2011-08-22';//Пн
+
+$start_date = '2014-03-17';//Пн
+
+$db->query("DELETE FROM average_flat_price WHERE date>='$start_date'");
+
 while ($start_date < date('Y-m-d')) {
 	$end_date = getNextDate($start_date,7);		
 	saveAveragePrices($start_date,$end_date);		
 	$start_date = $end_date;
 }
 
-*/
-
 $end_date = date('Y-m-d');
-//$end_date = '2012-01-16';
+//$end_date = '2015-09-14';
 $start_date = getNextDate($end_date,-7);
-saveAveragePrices($start_date,$end_date);		
+//saveAveragePrices($start_date,$end_date);
 
 

@@ -51,18 +51,21 @@
 	    <td valign="middle" align="left">
 	    <a href="index.html" title="Главная">
 		<font class="site_title">Мой Новый <font color="#615e60">Дом</font></font></a><br><font class="slogan">Найди, <font color="#d50707">где тебе жить</font></font></td>
-	    <td valign="middle" align="left"><p style="padding-top:10px;"><h1 class="site_subtitle">Недвижимость в Йошкар-Оле и Марий Эл<br><font color="#d50707">Каталог</font> квартир, домов, земельных участков</h1></p>
-		
-<!--		<p>
+	    <td valign="middle" align="left"><p style="padding-top:10px;"><h1 class="site_subtitle">Недвижимость в Йошкар-Оле и Марий Эл<br><font color="#d50707">Каталог</font> квартир, домов, земельных участков</h1></p>		
+		<!--
+		<p>
 		<h1 style="color:#d50707">Поздравляем с Рождеством Христовым!</h1>
 		</p>
+		
 		<p>
 		<h1 style="color:#d50707">Поздравляем с Крещением Господним!</h1>
-		</p>
-        <p>
+		</p>		
+		
+		<p>		
 		<h1 style="color:#d50707">Поздравляем со Светлым Христовым Воскресением!</h1>
 		</p>
-        -->
+		-->
+		
 		</td>
 	    <td align="right"><img src="/images/top_{$top_img_num}.jpg"></td>	    	   
 	   </tr>  
@@ -106,7 +109,9 @@
    {include file="main_menu.tpl"}
 <!-- <div class="box_mini"></div> -->
 {if !$subdomain && !$_SESSION.user_id}
-<!--<div style="padding:0; margin: 8px 0 -10px 0;">adv</div>-->
+<div style="padding:0; margin: 8px 0 -10px 0;">
+    <a href="http://vk.com/zapretabortov" target="_blank"><img src="/uploads/zapret_abortov.jpg" /></a>
+</div>
 {/if}
   </td> 
  </tr>

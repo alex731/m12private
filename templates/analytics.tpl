@@ -6,7 +6,7 @@
 <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">
     {literal}
-      google.load("visualization", "1", {packages:["corechart"]});
+      google.load('visualization', '1', {packages: ['corechart', 'line']});
       google.setOnLoadCallback(drawChart);
       function drawChart() {
         var data = new google.visualization.DataTable();
@@ -21,7 +21,9 @@
         ]);
 
         var options = {
-          width: 1000, height: 400,allowHtml: true,
+          width: window.innerWidth-100,
+          height: 400,
+          vAxis: {minValue: 20000,maxValue: 85000,viewWindowMode:'maximized'},
           title: 'Средняя недельная цена за кв.м. в руб. по квартирам в Йошкар-Оле (вторичка и новостройки)'
         };
         
@@ -48,7 +50,9 @@
         ]);
 
         var options = {
-          width: 1000, height: 400,
+          width: window.innerWidth-100,
+          height: 400,
+          vAxis: {minValue: 1000000,viewWindowMode:'maximized'},
           title: 'Средняя недельная цена квартиры в Йошкар-Оле (вторичка и новостройки)'
         };
         var formatter = new google.visualization.NumberFormat({
@@ -60,11 +64,11 @@
       	formatter.format(data2, 3);
 
         var chart2 = new google.visualization.LineChart(document.getElementById('chart_div2'));
-        chart2.draw(data2, options);        
+        chart2.draw(data2, options);
       }
       {/literal}
     </script>
-<div id="chart_div" align="center"></div>
-<div id="chart_div2" align="center"></div>
+<div id="chart_div"></div>
+<div id="chart_div2"></div>
 </div></div>
 {include file="footer.tpl"}
