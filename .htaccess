@@ -1,0 +1,15 @@
+Options         FollowSymLinks SymLinksIfOwnerMatch Includes MultiViews
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^www\.mari12\.ru
+RewriteRule ^(.*)$ http://mari12.ru/$1 [R=permanent,L]
+RewriteBase   /
+RewriteRule ^(.*)\.html $1\.php
+php_value display_errors 1
+AddDefaultCharset UTF-8
+php_value upload_max_filesize 16M
+php_value memory_limit 512M
+
+php_flag magic_quotes_gpc Off
+
+#RewriteRule ^([a-z]+)/([a-z]+)/$ /$1\.php?action=$2
+#RewriteRule ^([a-z]+)/([0-9]*)/([0-9]*)/([0-9]*)/$ /flat.php?show=$1&year=$2&month=$3&day=$4

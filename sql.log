@@ -1,0 +1,71 @@
+SELECT f.*,t.city_id, t.street_id, t.id AS tenement_id, t.district_id, 
+			t.number AS tnum, t.storeys, s.name AS street, d.name AS district, c.name AS city,
+			t.type_id AS ttype, t.lifts, t.status tenement_status, t.lon, t.lat, p.name AS photo_tenement,
+			p2.name AS photo_flat,u.name AS user_name,a.name AS agency_name 
+			FROM flat AS f 
+			LEFT JOIN tenement AS t ON f.tenement_id=t.id   
+			LEFT JOIN street AS s ON t.street_id=s.id 
+			LEFT JOIN district AS d ON t.district_id=d.id 
+			LEFT JOIN city AS c ON t.city_id=c.id
+			LEFT JOIN photo AS p ON p.object_id=t.id AND p.kind_id=1 AND p.tag=0
+			LEFT JOIN photo AS p2 ON p2.object_id=f.id AND p2.kind_id=2
+			LEFT JOIN user AS u ON u.id=f.user_id
+			LEFT JOIN agency AS a ON u.agency_id=a.id  
+			 WHERE t.status='1' AND  f.status=2 AND t.city_id<3 AND f.user_id=7 AND f.updated_on>'2012-01-02' GROUP BY f.id ORDER BY updated_on DESC LIMIT 0,20			
+			SELECT f.*,t.city_id, t.street_id, t.id AS tenement_id, t.district_id, 
+			t.number AS tnum, t.storeys, s.name AS street, d.name AS district, c.name AS city,
+			t.type_id AS ttype, t.lifts, t.status tenement_status, t.lon, t.lat, p.name AS photo_tenement,
+			p2.name AS photo_flat,u.name AS user_name,a.name AS agency_name 
+			FROM flat AS f 
+			LEFT JOIN tenement AS t ON f.tenement_id=t.id   
+			LEFT JOIN street AS s ON t.street_id=s.id 
+			LEFT JOIN district AS d ON t.district_id=d.id 
+			LEFT JOIN city AS c ON t.city_id=c.id
+			LEFT JOIN photo AS p ON p.object_id=t.id AND p.kind_id=1 AND p.tag=0
+			LEFT JOIN photo AS p2 ON p2.object_id=f.id AND p2.kind_id=2
+			LEFT JOIN user AS u ON u.id=f.user_id
+			LEFT JOIN agency AS a ON u.agency_id=a.id  
+			 WHERE t.status='1' AND  f.status=2 AND t.city_id<3 AND f.updated_on>'2012-01-02' GROUP BY f.id ORDER BY updated_on DESC LIMIT 0,20			
+			SELECT f.*,t.city_id, t.street_id, t.id AS tenement_id, t.district_id, 
+			t.number AS tnum, t.storeys, s.name AS street, d.name AS district, c.name AS city,
+			t.type_id AS ttype, t.lifts, t.status tenement_status, t.lon, t.lat, p.name AS photo_tenement,
+			p2.name AS photo_flat,u.name AS user_name,a.name AS agency_name 
+			FROM flat AS f 
+			LEFT JOIN tenement AS t ON f.tenement_id=t.id   
+			LEFT JOIN street AS s ON t.street_id=s.id 
+			LEFT JOIN district AS d ON t.district_id=d.id 
+			LEFT JOIN city AS c ON t.city_id=c.id
+			LEFT JOIN photo AS p ON p.object_id=t.id AND p.kind_id=1 AND p.tag=0
+			LEFT JOIN photo AS p2 ON p2.object_id=f.id AND p2.kind_id=2
+			LEFT JOIN user AS u ON u.id=f.user_id
+			LEFT JOIN agency AS a ON u.agency_id=a.id  
+			 WHERE t.status='1' AND  f.status=2 AND t.city_id<3 AND f.updated_on>'2012-01-02' GROUP BY f.id ORDER BY updated_on DESC LIMIT 0,20			
+			SELECT f.*,t.city_id, t.street_id, t.id AS tenement_id, t.district_id, 
+			t.number AS tnum, t.storeys, s.name AS street, d.name AS district, c.name AS city,
+			t.type_id AS ttype, t.lifts, t.status tenement_status, t.lon, t.lat, p.name AS photo_tenement,
+			p2.name AS photo_flat,u.name AS user_name,a.name AS agency_name 
+			FROM flat AS f 
+			LEFT JOIN tenement AS t ON f.tenement_id=t.id   
+			LEFT JOIN street AS s ON t.street_id=s.id 
+			LEFT JOIN district AS d ON t.district_id=d.id 
+			LEFT JOIN city AS c ON t.city_id=c.id
+			LEFT JOIN photo AS p ON p.object_id=t.id AND p.kind_id=1 AND p.tag=0
+			LEFT JOIN photo AS p2 ON p2.object_id=f.id AND p2.kind_id=2
+			LEFT JOIN user AS u ON u.id=f.user_id
+			LEFT JOIN agency AS a ON u.agency_id=a.id  
+			 WHERE t.status='1' AND  f.status=2 AND t.city_id<3 AND f.updated_on>'2012-01-02' GROUP BY f.id ORDER BY updated_on DESC LIMIT 300,20			
+			SELECT f.*,t.city_id, t.street_id, t.id AS tenement_id, t.district_id, 
+			t.number AS tnum, t.storeys, s.name AS street, d.name AS district, c.name AS city,
+			t.type_id AS ttype, t.lifts, t.status tenement_status, t.lon, t.lat, p.name AS photo_tenement,
+			p2.name AS photo_flat,u.name AS user_name,a.name AS agency_name 
+			FROM flat AS f 
+			LEFT JOIN tenement AS t ON f.tenement_id=t.id   
+			LEFT JOIN street AS s ON t.street_id=s.id 
+			LEFT JOIN district AS d ON t.district_id=d.id 
+			LEFT JOIN city AS c ON t.city_id=c.id
+			LEFT JOIN photo AS p ON p.object_id=t.id AND p.kind_id=1 AND p.tag=0
+			LEFT JOIN photo AS p2 ON p2.object_id=f.id AND p2.kind_id=2
+			LEFT JOIN user AS u ON u.id=f.user_id
+			LEFT JOIN agency AS a ON u.agency_id=a.id  
+			 WHERE t.status='1' AND  f.status=2 AND t.city_id<3 AND f.updated_on>'2012-01-02' GROUP BY f.id ORDER BY updated_on DESC LIMIT 0,20			
+			

@@ -1,0 +1,66 @@
+/*
+CSS used for navigation system
+*/
+
+.menulines{
+	border: 1px solid #ffffff;
+	font-size: 10px;
+	width: 135px;
+/*	color: #666666;*/
+	color: #FFFFFF;
+	font-family : Verdana, Geneva, sans-serif;
+}
+
+
+.menulines a{
+	/*	color: #666666;*/
+	color: #FFFFFF;
+	text-decoration: none;
+	font-family : Verdana, Geneva, sans-serif;
+}
+.menulines a:hover {
+	background-color: #F0F0F1;
+	color: #666666;
+	text-decoration: none;
+	font-family : Verdana, Geneva, sans-serif;
+}
+
+.menulines a:link, a:visited {
+	color: #666666;
+	font-family : Verdana, Geneva, sans-serif;
+}
+
+/*
+cross browser (ish) CSS implementation for transparency:
+filter:alpha(opacity=80); (IE)
+-moz-opacity:0.8; (Mozilla)
+*/
+.menutitle{
+filter:alpha(opacity=70);
+-moz-opacity:0.7;
+	background-color: #C3C3C3;
+	border: 1px solid #000000;
+	color: #2D2D2D;
+	cursor: pointer;
+	margin-top: 4px;
+	padding: 1px;
+	text-align: left;
+	width: 140px;
+	background-image: url(CMS/images/menu_bk.gif);
+	font-family : Verdana, Geneva, sans-serif;
+}
+.submenu{
+font-family : Verdana, Geneva, sans-serif;
+filter:alpha(opacity=70);
+-moz-opacity:0.7;
+	margin-top: 0em;
+	background-color: #F4F4F4;
+	border-left: 1px solid #666666;
+	border-right: 1px solid #666666;
+	border-bottom: 1px solid #666666;
+	width: 135px;
+	cursor: pointer;
+	color: #666666;
+
+}
+
